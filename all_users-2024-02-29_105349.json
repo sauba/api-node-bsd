@@ -1,0 +1,16 @@
+[
+  {
+    "userId": "0792b078-58eb-4cb9-bcdb-51204216df79",
+    "email": "thiagosauba@gmail.com",
+    "name": "Thiago José de Queiroz",
+    "role": "admin",
+    "password": "12345"
+  },
+  {
+    "userId": "5dd8cdcc-c896-46c8-8295-4979791dfbbf",
+    "email": "diegosenha88@gmail.com",
+    "name": "Diego Raphael Almeida Silva",
+    "role": "admin",
+    "password": "12345"
+  }
+]
