@@ -27,6 +27,6 @@
 ## RNFs (Requisitos Não Funcionais)
 
 - [x] User Password must be encripted;
-- [] Data must be Persisted at a PostgreSQL Database;
+- [x] Data must be Persisted at a PostgreSQL Database;
 - [] All Data lists needs to be paginated with 20 items per page;
 - [] User must be identified by a JWT (JSON Web Token);
