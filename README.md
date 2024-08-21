@@ -5,14 +5,14 @@
 ## RFs (Requisitos Funcionais)
 
 - [x] Should be Able to sign up;
-- [] Should be Able to Authenticate;
-- [] Should be Able to get an Authenticated User Profile;
-  // - [] Should be Able to get total check-ins of a User;
-  // - [] Should be Able to get all check-ins list of a User;
-  // - [] Should be Able to find nearby gyms;
-  // - [] Should be Able to find a gym by name;
-  // - [] Should be Able to check-in at gym;
-  // - [] Should be Able to validate a user check-ins;
+- [x] Should be Able to Authenticate;
+- [x] Should be Able to get an Authenticated User Profile;
+      // - [] Should be Able to get total check-ins of a User;
+      // - [] Should be Able to get all check-ins list of a User;
+      // - [] Should be Able to find nearby gyms;
+      // - [] Should be Able to find a gym by name;
+      // - [] Should be Able to check-in at gym;
+      // - [] Should be Able to validate a user check-ins;
 - [] Should be Able to create a product;
 
 ## RNs (Regras de Negócio)

@@ -3,6 +3,22 @@ import { prisma } from "../../lib/prisma";
 import { ProductsRepository } from "../products-repository";
 
 export class PrismaProductsRepository implements ProductsRepository{
+  async findById(productId: string) {
+    const product = await prisma.product.findUnique({
+      where: {
+        productId,
+      },
+    })
+
+    return product
+  }
+  
+  async findAllProducts() {
+    const products = await prisma.product.findMany()
+
+    return products
+  }
+
   async findByName(name: string) {
     const product = await prisma.product.findUnique({
       where: {
@@ -19,4 +35,5 @@ export class PrismaProductsRepository implements ProductsRepository{
 
     return product
   }
+
 }

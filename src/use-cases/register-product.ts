@@ -1,3 +1,4 @@
+import { Product } from "@prisma/client";
 import { ProductsRepository } from "../repositories/products-repository";
 import { ProductAlreadyExistsError } from './errors/product-already-exists-error';
 
@@ -12,10 +13,23 @@ interface IRegisterProductUseCaseRequest {
   isAvailable: boolean
 }
 
+interface IRegisterProductUseCaseResponse {
+  product: Product
+}
+
 export class RegisterProductUseCase { 
   constructor(private productsRepository: ProductsRepository) {}
 
-  async execute({name, description, brand, productType, factoryPrice, price, productStock, isAvailable}: IRegisterProductUseCaseRequest) {
+  async execute({
+    name,
+    description,
+    brand,
+    productType,
+    factoryPrice,
+    price,
+    productStock,
+    isAvailable
+  }: IRegisterProductUseCaseRequest): Promise<IRegisterProductUseCaseResponse> {
   
   const productWithSameName = await this.productsRepository.findByName(name)
 
@@ -23,8 +37,12 @@ export class RegisterProductUseCase {
     throw new ProductAlreadyExistsError()
   }
 
-  await this.productsRepository.create({
+  const product = await this.productsRepository.create({
       name, description, brand, productType, factoryPrice, price, productStock, isAvailable
     })
+
+    return {
+      product,
+    }
   }
 }
